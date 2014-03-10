@@ -1,0 +1,15 @@
+# Created by http://www.gitignore.io
+
+### Leiningen ###
+pom.xml
+*jar
+/lib/
+/classes/
+/target/
+.lein-deps-sum
+.lein-repl-history
+.lein-plugins/
+/resources/public/js/*
+/resources/public/js-min/*
+
+.nrepl-port

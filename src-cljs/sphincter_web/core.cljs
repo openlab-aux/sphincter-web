@@ -51,6 +51,9 @@
 
 ;;;; UI Logic
 
+(declare token-ui)
+(declare open-close-ui)
+
 (defn log [obj]
   (.log js/console obj))
 
@@ -81,7 +84,7 @@
              (let [action (alt!
                             openc  :open
                             closec :closed)
-                   res (query-sphincter action)]
+                   res (query-sphincter token action)]
                (recur {:type res :action action})))))
 
 ;;;; Main

@@ -7,7 +7,10 @@ from BaseHTTPServer import HTTPServer, BaseHTTPRequestHandler
 class MockSphincter(BaseHTTPRequestHandler):
     
     def do_GET(self):
+        import time
+        time.sleep(1)
         self.send_response(200)
+        self.send_header("Access-Control-Allow-Origin", "*")
         self.end_headers()
 
         answers = ['SUCCESS', 'FAILED', 'NOT ALLOWED']
